@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "113995058312",
+    "firebase_url": "https://desopilando-e45b0.firebaseio.com",
+    "project_id": "desopilando-e45b0",
+    "storage_bucket": "desopilando-e45b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113995058312:android:a70073e59df00994",
+        "android_client_info": {
+          "package_name": "com.desopilando.aliatech.desopilando"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "113995058312-72791p23um5cdau27rretg01enlt05r5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.desopilando.aliatech.desopilando",
+            "certificate_hash": "9b7c50259504680ef769674069f4ce64079debcc"
+          }
+        },
+        {
+          "client_id": "113995058312-0lfb389i8pjaupgrh33hlis19bmaihj5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAdBe6Jw1RYees8O2FWUQFXczsmtLDBg8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "113995058312-0lfb389i8pjaupgrh33hlis19bmaihj5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

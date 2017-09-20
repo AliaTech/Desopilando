@@ -1,7 +1,9 @@
-package com.desopilando.aliatech.desopilando;
+package com.desopilando.aliatech.desopilando.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.desopilando.aliatech.desopilando.R;
 
 public class MainActivity extends AppCompatActivity {
 
