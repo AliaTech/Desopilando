@@ -23,38 +23,20 @@
 
             <ImageView
                 android:layout_width="350dp"
-                android:layout_height="150dp"
+                android:layout_height="120dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="20dp"
+                android:layout_marginTop="48dp"
                 android:contentDescription=""
                 android:padding="16dp"
-                android:src="@drawable/usuario"
+                android:src="@drawable/logo"
                 tools:ignore="ContentDescription" />
 
             <EditText
-                android:id="@+id/campo_nome_cadastro"
+                android:id="@+id/campo_email_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/ic_person_white_24dp"
-                android:drawablePadding="12dp"
-                android:ems="10"
-                android:hint="Digite seu nome"
-                android:inputType="textEmailAddress"
-                android:maxLines="1"
-                android:padding="8dp"
-                android:textColorHint="#fff"
-                tools:ignore="HardcodedText,RtlHardcoded" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#f9d7db" />
-
-            <EditText
-                android:id="@+id/campo_email_cadastro"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="70dp"
                 android:background="@android:color/transparent"
                 android:drawableLeft="@drawable/ic_person_white_24dp"
                 android:drawablePadding="12dp"
@@ -71,36 +53,15 @@
                 android:background="#f9d7db" />
 
             <EditText
-                android:id="@+id/campo_senha_cadastro"
+                android:id="@+id/campo_senha_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="4dp"
                 android:background="@android:color/transparent"
                 android:drawableLeft="@drawable/ic_lock_white_24dp"
                 android:drawablePadding="12dp"
                 android:ems="10"
-                android:hint="Digite uma senha"
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:padding="8dp"
-                android:textColorHint="#fff"
-                tools:ignore="HardcodedText,RtlHardcoded" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#f9d7db" />
-
-            <EditText
-                android:id="@+id/campo_repetirSenha_cadastro"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/ic_lock_white_24dp"
-                android:drawablePadding="12dp"
-                android:ems="10"
-                android:hint="Repita sua senha"
+                android:hint="......."
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:padding="8dp"
@@ -114,18 +75,41 @@
 
 
             <Button
-                android:id="@+id/botao_cadastrar"
+                android:id="@+id/botao_entrar_login"
                 style="@style/Base.TextAppearance.AppCompat.Body1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="24dp"
                 android:background="@drawable/background_login"
                 android:clickable="true"
                 android:padding="16dp"
-                android:text="@string/cadastrar"
+                android:text="@string/entrar"
                 android:textAllCaps="false"
                 android:textColor="#f16f7d"
                 android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/botao_novo_cadastro"
+                style="@style/Base.TextAppearance.AppCompat.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/background_signup"
+                android:clickable="true"
+                android:padding="16dp"
+                android:text="@string/nova_conta"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:onClick="abrirCadastroUsuario"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Desenvolvido por: Aliatech©  - 2017"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"/>
+
 
 
         </LinearLayout>
