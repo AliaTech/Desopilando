@@ -1,5 +1,9 @@
 package com.desopilando.aliatech.desopilando.activity.model;
 
+import com.desopilando.aliatech.desopilando.activity.config.ConfiguracaoFirebase;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.Exclude;
+
 /**
  * Created by douglas on 27/09/17.
  */
@@ -15,6 +19,15 @@ public class Usuario {
 
     }
 
+    public void salvar(){
+
+        DatabaseReference referenciaFirebase = ConfiguracaoFirebase.getFirebase();
+        referenciaFirebase.child("usuarios").child(getId()).setValue(this);
+
+
+    }
+
+    @Exclude
     public String getId() {
         return id;
     }
@@ -39,6 +52,7 @@ public class Usuario {
         this.email = email;
     }
 
+    @Exclude
     public String getSenha() {
         return senha;
     }
