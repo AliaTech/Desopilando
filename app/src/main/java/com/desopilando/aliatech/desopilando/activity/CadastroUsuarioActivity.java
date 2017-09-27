@@ -45,8 +45,16 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
                 usuario = new Usuario();
                 usuario.setNome(campoNome.getText().toString());
                 usuario.setEmail(campoEmail.getText().toString());
-                usuario.setSenha(campoSenha.getText().toString());
-                cadastrarUsuario();
+
+                if(campoSenha.getText().toString().equals(campoRepetirSenha.getText().toString())) {
+                    usuario.setSenha(campoSenha.getText().toString());
+                    cadastrarUsuario();
+                }else{
+
+                    Toast.makeText(CadastroUsuarioActivity.this, "As senhas digitadas não são iguais!", Toast.LENGTH_LONG).show();
+
+                }
+
 
             }
         });
