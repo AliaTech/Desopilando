@@ -15,6 +15,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 
 public class CadastroUsuarioActivity extends AppCompatActivity {
@@ -43,19 +46,23 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                usuario = new Usuario();
-                usuario.setNome(campoNome.getText().toString());
-                usuario.setEmail(campoEmail.getText().toString());
+                if(campoNome.getText().toString().equals("") || campoEmail.getText().toString().equals("") || campoSenha.getText().toString().equals("") || campoRepetirSenha.getText().toString().equals("")) {
 
-                if(campoSenha.getText().toString().equals(campoRepetirSenha.getText().toString())) {
-                    usuario.setSenha(campoSenha.getText().toString());
-                    cadastrarUsuario();
-                }else{
+                    Toast.makeText(CadastroUsuarioActivity.this, "Todos os campos são obrigatórios!", Toast.LENGTH_LONG).show();
 
-                    Toast.makeText(CadastroUsuarioActivity.this, "As senhas digitadas não são iguais!", Toast.LENGTH_LONG).show();
+                } else {
 
+                    usuario = new Usuario();
+                    usuario.setNome(campoNome.getText().toString());
+                    usuario.setEmail(campoEmail.getText().toString());
+
+                    if (campoSenha.getText().toString().equals(campoRepetirSenha.getText().toString())) {
+                        usuario.setSenha(campoSenha.getText().toString());
+                        cadastrarUsuario();
+                    } else {
+                        Toast.makeText(CadastroUsuarioActivity.this, "As senhas digitadas não são iguais!", Toast.LENGTH_LONG).show();
+                    }
                 }
-
 
             }
         });
@@ -64,7 +71,9 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
 
     private void cadastrarUsuario(){
 
+        //Configurar a autenticação junto ao Firebase
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
+        //Criar com email e senha
         autenticacao.createUserWithEmailAndPassword(
                 usuario.getEmail(),
                 usuario.getSenha()
@@ -74,12 +83,34 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
                 if(task.isSuccessful()){
                     Toast.makeText(CadastroUsuarioActivity.this, "Sucesso ao cadastrar usuário", Toast.LENGTH_LONG).show();
 
+                    //Salvar os dados do usuario no banco
                     FirebaseUser usuarioFirebase = task.getResult().getUser();
                     usuario.setId(usuarioFirebase.getUid());
                     usuario.salvar();
 
+                    //Após o cadastro usuario é deslogado e retorna a tela de login
+                    autenticacao.signOut();
+                    finish();
+
                 }else{
-                    Toast.makeText(CadastroUsuarioActivity.this, "Erro ao cadastrar usuário", Toast.LENGTH_LONG).show();
+                    //Tratamento de exceções
+                    String erroExcecao = "";
+                    try{
+
+                        throw task.getException();
+
+                    }catch (FirebaseAuthWeakPasswordException e){
+                        erroExcecao = "Digite uma sennha mais forte, contendo letras e numeros";
+                    } catch (FirebaseAuthInvalidCredentialsException e) {
+                        erroExcecao = "O e-mail que você digitou não é valido";
+                    } catch (FirebaseAuthUserCollisionException e) {
+                        erroExcecao = "Já existe um usuário usando esse endereço de e-mail";
+                    } catch (Exception e) {
+                        erroExcecao = "ao efeturar o cadastro!";
+                        e.printStackTrace();
+                    }
+
+                    Toast.makeText(CadastroUsuarioActivity.this, "Erro: "+erroExcecao, Toast.LENGTH_LONG).show();
                 }
             }
         });
