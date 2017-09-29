@@ -2,9 +2,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.saud.elab.androidtestui.MainActivity">
+
     <item
         android:id="@+id/action_settings"
-        android:orderInCategory="100"
+        android:orderInCategory="300"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/item_sair"
+        android:title="@string/item_sair"
+        android:orderInCategory="400"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/item_adicionar"
+        android:title="@string/item_adicionar"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/item_perfil"
+        android:title="@string/item_perfil"
+        android:orderInCategory="200"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/item_buscar"
+        android:title="Buscar"
+        android:orderInCategory="500"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_search"/>
+
 </menu>

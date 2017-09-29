@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login_gradbk);
 
         email = (EditText) findViewById(R.id.campo_email_login);
-        senha = (EditText) findViewById(R.id.campo_email_login);
+        senha = (EditText) findViewById(R.id.campo_senha_login);
         botaoLogar = (Button) findViewById(R.id.botao_entrar_login);
 
         botaoLogar.setOnClickListener(new View.OnClickListener() {

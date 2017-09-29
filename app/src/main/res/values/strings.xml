@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">AndroidTestUI</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Configurações</string>
+    <string name="item_sair">Sair</string>
+    <string name="item_adicionar">Novo local</string>
+    <string name="item_perfil">Perfil</string>
 
     <!-- Strings related to Main -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
