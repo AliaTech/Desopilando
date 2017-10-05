@@ -1,6 +1,8 @@
 package com.desopilando.aliatech.desopilando.activity;
 
 import android.content.Intent;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -9,13 +11,18 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.desopilando.aliatech.desopilando.R;
+import com.desopilando.aliatech.desopilando.activity.adapter.TabAdapter;
 import com.desopilando.aliatech.desopilando.activity.config.ConfiguracaoFirebase;
+import com.desopilando.aliatech.desopilando.activity.helper.SlidingTabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private FirebaseAuth usuarioAutenticacao;
+
+    private SlidingTabLayout slidingTabLayout;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +34,19 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Desopilando");
         setSupportActionBar(toolbar);
+
+        slidingTabLayout = (SlidingTabLayout) findViewById(R.id.stl_tabs);
+        viewPager = (ViewPager) findViewById(R.id.vp_pagina);
+
+        //Configurar sliding tabs
+        slidingTabLayout.setDistributeEvenly(true);
+        slidingTabLayout.setSelectedIndicatorColors(ContextCompat.getColor(this, R.color.white));
+
+        //Configurar adapter
+        TabAdapter tabAdapter = new TabAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(tabAdapter);
+
+        slidingTabLayout.setViewPager(viewPager);
 
     }
 
