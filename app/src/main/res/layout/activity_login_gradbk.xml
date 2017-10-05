@@ -106,9 +106,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Desenvolvido por: Aliatech©  - 2017"
+                android:layout_marginTop="20dp"
+                android:text="@string/desenvolvido_por_aliatech_2017"
                 android:textAlignment="center"
-                android:layout_marginTop="20dp"/>
+                android:textColor="@android:color/white" />
 
 
 
