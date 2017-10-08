@@ -31,6 +31,7 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
 
     private FirebaseAuth autenticacao;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,7 +101,7 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
                         throw task.getException();
 
                     }catch (FirebaseAuthWeakPasswordException e){
-                        erroExcecao = "Digite uma sennha mais forte, contendo letras e numeros";
+                        erroExcecao = "Digite uma  senha mais forte, contendo letras e numeros";
                     } catch (FirebaseAuthInvalidCredentialsException e) {
                         erroExcecao = "O e-mail que você digitou não é valido";
                     } catch (FirebaseAuthUserCollisionException e) {
