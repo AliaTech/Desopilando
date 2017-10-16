@@ -8,6 +8,8 @@
     android:paddingRight="18dp"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     android:background="@drawable/new_login_gradients">
 
     <ScrollView
@@ -46,74 +48,74 @@
                 android:maxLines="1"
                 android:padding="8dp"
                 android:textColorHint="#fff"
-                tools:ignore="HardcodedText,RtlHardcoded" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#f9d7db" />
+                tools:ignore="HardcodedText,RtlHardcoded"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f9d7db" />
 
-            <EditText
-                android:id="@+id/campo_senha_login"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/ic_lock_white_24dp"
-                android:drawablePadding="12dp"
-                android:ems="10"
-                android:hint="......."
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:padding="8dp"
-                android:textColorHint="#fff"
-                tools:ignore="HardcodedText,RtlHardcoded" />
+        <EditText
+            android:id="@+id/campo_senha_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_lock_white_24dp"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="......."
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:textColorHint="#fff"
+            tools:ignore="HardcodedText,RtlHardcoded" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#f9d7db" />
-
-
-            <Button
-                android:id="@+id/botao_entrar_login"
-                style="@style/Base.TextAppearance.AppCompat.Body1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/background_login"
-                android:clickable="true"
-                android:padding="16dp"
-                android:text="@string/entrar"
-                android:textAllCaps="false"
-                android:textColor="#f16f7d"
-                android:textSize="18sp" />
-
-            <Button
-                android:id="@+id/botao_novo_cadastro"
-                style="@style/Base.TextAppearance.AppCompat.Body1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/background_signup"
-                android:clickable="true"
-                android:padding="16dp"
-                android:text="@string/nova_conta"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="18sp"
-                android:onClick="abrirCadastroUsuario"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
-                android:text="@string/desenvolvido_por_aliatech_2017"
-                android:textAlignment="center"
-                android:textColor="@android:color/white" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f9d7db" />
 
 
+        <Button
+            android:id="@+id/botao_entrar_login"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/background_login"
+            android:clickable="true"
+            android:padding="16dp"
+            android:text="@string/entrar"
+            android:textAllCaps="false"
+            android:textColor="#ff4203"
+            android:textSize="18sp" />
 
-        </LinearLayout>
-    </ScrollView>
+        <Button
+            android:id="@+id/botao_novo_cadastro"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_login"
+            android:clickable="true"
+            android:padding="16dp"
+            android:text="@string/nova_conta"
+            android:textAllCaps="false"
+            android:textColor="#ff4203"
+            android:textSize="18sp"
+            android:onClick="abrirCadastroUsuario"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:text="@string/desenvolvido_por_aliatech_2017"
+            android:textAlignment="center"
+            android:textColor="@android:color/white" />
+
+
+
+    </LinearLayout>
+</ScrollView>
 
 </LinearLayout>
