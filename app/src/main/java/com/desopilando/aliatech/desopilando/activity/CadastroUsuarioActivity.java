@@ -1,5 +1,6 @@
 package com.desopilando.aliatech.desopilando.activity;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 
 import com.desopilando.aliatech.desopilando.R;
 import com.desopilando.aliatech.desopilando.activity.config.ConfiguracaoFirebase;
+import com.desopilando.aliatech.desopilando.activity.helper.Base64Custom;
 import com.desopilando.aliatech.desopilando.activity.model.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -85,12 +87,12 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
 
                     //Salvar os dados do usuario no banco
                     FirebaseUser usuarioFirebase = task.getResult().getUser();
-                    usuario.setId(usuarioFirebase.getUid());
+                    String identificadorUsuario = Base64Custom.codificarBase64(usuario.getEmail());
+
+                    usuario.setId(identificadorUsuario);
                     usuario.salvar();
 
-                    //Após o cadastro usuario é deslogado e retorna a tela de login
-                    autenticacao.signOut();
-                    finish();
+                    abrirLoginUsuario();
 
                 }else{
                     //Tratamento de exceções
@@ -114,6 +116,14 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
                 }
             }
         });
+
+    }
+
+    public void abrirLoginUsuario(){
+
+        Intent intent = new Intent(CadastroUsuarioActivity.this, LoginActivity.class);
+        startActivity(intent);
+        finish();
 
     }
 }
