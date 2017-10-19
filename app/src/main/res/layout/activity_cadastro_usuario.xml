@@ -41,10 +41,12 @@
                 android:drawableLeft="@drawable/ic_person_white_24dp"
                 android:drawablePadding="12dp"
                 android:ems="10"
+                android:fontFamily="sans-serif"
                 android:hint="Digite seu nome"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:padding="8dp"
+                android:textColor="@color/white"
                 android:textColorHint="#fff"
                 tools:ignore="HardcodedText,RtlHardcoded" />
             <View
@@ -58,13 +60,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/ic_person_white_24dp"
+                android:drawableLeft="@drawable/ic_email_24dp"
                 android:drawablePadding="12dp"
                 android:ems="10"
                 android:hint="Digite seu e-mail"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:padding="8dp"
+                android:textColor="@color/white"
                 android:textColorHint="#fff"
                 tools:ignore="HardcodedText,RtlHardcoded" />
             <View
@@ -81,10 +84,12 @@
                 android:drawableLeft="@drawable/ic_lock_white_24dp"
                 android:drawablePadding="12dp"
                 android:ems="10"
+                android:fontFamily="sans-serif"
                 android:hint="Digite uma senha"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:padding="8dp"
+                android:textColor="@color/white"
                 android:textColorHint="#fff"
                 tools:ignore="HardcodedText,RtlHardcoded" />
 
@@ -102,10 +107,12 @@
                 android:drawableLeft="@drawable/ic_lock_white_24dp"
                 android:drawablePadding="12dp"
                 android:ems="10"
+                android:fontFamily="sans-serif"
                 android:hint="Repita sua senha"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:padding="8dp"
+                android:textColor="@color/white"
                 android:textColorHint="#fff"
                 tools:ignore="HardcodedText,RtlHardcoded" />
 

@@ -226,4 +226,18 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string-array name="locais_array">
+        <item>Restaurante</item>
+        <item>Bar</item>
+        <item>Lanchonete</item>
+        <item>Evento</item>
+        <item>Sorveteria</item>
+        <item>Pizzaria</item>
+        <item>Churrascaria</item>
+        <item>Casa de Shows</item>
+        <item>Loja</item>
+        <item>Mercado</item>
+        <item>Serviço</item>
+    </string-array>
+
 </resources>

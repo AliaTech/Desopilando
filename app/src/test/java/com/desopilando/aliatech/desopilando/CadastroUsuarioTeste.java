@@ -1,17 +1,9 @@
 package com.desopilando.aliatech.desopilando;
 
-import android.media.MediaCodec;
-import android.util.StringBuilderPrinter;
-import android.widget.EditText;
-
-import com.desopilando.aliatech.desopilando.activity.CadastroUsuarioActivity;
 import com.desopilando.aliatech.desopilando.activity.model.Usuario;
-import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 
-import junit.framework.*;
 import junit.framework.Assert;
 
-import org.hamcrest.*;
 import org.junit.*;
 import org.junit.Test;
 

@@ -9,12 +9,14 @@
         <item name="android:colorForeground">@color/foreground_material_light</item>
     </style>
 
-    <style name="LoginTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
+    <style name="LoginTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/barraSuperiorLogin</item>
         <item name="colorPrimaryDark">@color/barraSuperiorLogin</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:colorForeground">@color/foreground_material_light</item>
         <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:colorBackground">@color/background_material_dark</item>
+        <item name="android:textColorPrimary">@color/black</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

@@ -1,6 +1,7 @@
-package com.desopilando.aliatech.desopilando.activity;
+package com.desopilando.aliatech.desopilando.activity.activity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -65,6 +66,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.item_sair:
                 deslogarUsuario();
                 return true;
+            case  R.id.item_adicionar:
+                abrirTelaCadastro();;
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
 
@@ -77,6 +81,13 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
+
+    }
+
+    public void abrirTelaCadastro(){
+
+        Intent intent2 = new Intent(MainActivity.this, CadastroEstabelecimentoActivity.class);
+        startActivity(intent2);
 
     }
 }

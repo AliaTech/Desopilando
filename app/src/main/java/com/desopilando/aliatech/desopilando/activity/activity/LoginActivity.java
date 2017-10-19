@@ -1,4 +1,4 @@
-package com.desopilando.aliatech.desopilando.activity;
+package com.desopilando.aliatech.desopilando.activity.activity;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -50,6 +50,7 @@ public class LoginActivity extends AppCompatActivity {
                     usuario.setEmail(email.getText().toString());
                     usuario.setSenha(senha.getText().toString());
                     validarLogin();
+                    Toast.makeText(LoginActivity.this, "Carregando...", Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -69,8 +70,9 @@ public class LoginActivity extends AppCompatActivity {
 
                 if(task.isSuccessful()){
 
+
                     abrirTelaPrincipal();
-                    Toast.makeText(LoginActivity.this, "Logado com sucesso", Toast.LENGTH_LONG).show();
+
 
                 }else{
 
