@@ -74,6 +74,7 @@
 
     <color name="barraSuperiorLogin">#ffc32b</color>
     <color name="background_material_dark">#ffffff</color>
+    <color name="botaoCadastrarEstabelecimento">#ffa500</color>
 
 
 </resources>

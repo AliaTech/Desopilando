@@ -20,38 +20,36 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
             android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
+                android:layout_marginTop="10dp"
                 android:layout_alignTop="@+id/campo_nome_estabelecimento"
                 android:layout_gravity="center"
-                android:layout_toEndOf="@+id/textView2"
-                android:layout_toRightOf="@+id/textView2"
                 android:background="@drawable/estabelecimento" />
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:text="Carregar uma imagem"
                 android:textAlignment="center"
-                android:textColor="@color/black"
                 android:textSize="14dp" />
 
             <EditText
                 android:id="@+id/campo_nome_estabelecimento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="18dp"
-                android:layout_marginRight="18dp"
                 android:layout_marginTop="8dp"
                 android:background="@android:color/transparent"
                 android:drawableLeft="@drawable/ic_store_mall_directory_24dp"
                 android:drawablePadding="12dp"
-                android:ems="10"
                 android:hint="Nome do local/evento"
                 android:inputType="textPersonName"
                 android:maxLines="1"
@@ -64,15 +62,12 @@
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="1dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginRight="18dp"
                 android:background="@color/black" />
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="18dp"
                 android:layout_marginTop="15dp"
                 android:text="Selecione a opção correspondente:"
                 android:textSize="16dp" />
@@ -81,15 +76,11 @@
                 android:id="@+id/locais_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="18dp"
-                android:layout_marginRight="18dp"
                 android:layout_marginTop="4dp" />
 
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="1dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginRight="18dp"
                 android:layout_marginTop="4dp"
                 android:background="@color/black" />
 
@@ -97,37 +88,32 @@
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="18dp"
                 android:layout_marginTop="15dp"
                 android:text="Selecione um local no mapa:"
                 android:textSize="16dp" />
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="14dp"
-                android:layout_marginRight="14dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/background_login_two"
+                android:textColor="@color/white"
                 android:text="ABRIR GOOGLE MAPS" />
 
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="1dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginRight="18dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="8dp"
                 android:background="@color/black" />
 
             <EditText
                 android:id="@+id/campo_fone_estabelecimento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="18dp"
-                android:layout_marginRight="18dp"
                 android:layout_marginTop="15dp"
                 android:background="@android:color/transparent"
                 android:drawableLeft="@drawable/ic_phone"
                 android:drawablePadding="12dp"
-                android:ems="10"
                 android:hint="Tefone para contato"
                 android:inputType="textPhonetic"
                 android:maxLines="1"
@@ -140,24 +126,18 @@
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="1dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginRight="18dp"
                 android:background="@color/black" />
 
             <EditText
                 android:id="@+id/campo_descricao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="18dp"
-                android:layout_marginRight="18dp"
                 android:layout_marginTop="15dp"
                 android:background="@android:color/transparent"
                 android:drawableLeft="@drawable/ic_description"
                 android:drawablePadding="12dp"
-                android:ems="10"
                 android:hint="Insira uma descrição"
                 android:inputType="textMultiLine"
-                android:maxLines="1"
                 android:padding="8dp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/blue_grey_primary"
@@ -167,67 +147,62 @@
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="1dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginRight="18dp"
                 android:background="@color/black" />
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="18dp"
                 android:layout_marginTop="15dp"
                 android:text="Adicione algumas fotos: "
                 android:textSize="16dp" />
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="14dp"
-                android:layout_marginRight="14dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/background_login_two"
+                android:textColor="@color/white"
                 android:text="ABRIR A GALERIA" />
 
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="1dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginRight="18dp"
+                android:layout_marginTop="8dp"
                 android:background="@color/black" />
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="18dp"
                 android:layout_marginTop="15dp"
                 android:text="Promoções ou eventos: "
                 android:textSize="16dp" />
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="14dp"
-                android:layout_marginRight="14dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/background_login_two"
+                android:textColor="@color/white"
                 android:text="ABRIR A GALERIA" />
 
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="1dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginRight="18dp"
+                android:layout_marginTop="8dp"
                 android:background="@color/black" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="14dp"
-                android:layout_marginRight="14dp"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bkgd_orange"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
                 android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:textSize="16dp"
                 android:text="CADASTRAR" />
-
 
         </LinearLayout>
     </ScrollView>
