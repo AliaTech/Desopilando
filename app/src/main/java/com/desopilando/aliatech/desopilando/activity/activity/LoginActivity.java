@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import com.desopilando.aliatech.desopilando.R;
 import com.desopilando.aliatech.desopilando.activity.config.ConfiguracaoFirebase;
+import com.desopilando.aliatech.desopilando.activity.helper.Base64Custom;
+import com.desopilando.aliatech.desopilando.activity.helper.Preferencias;
 import com.desopilando.aliatech.desopilando.activity.model.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -32,6 +34,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_gradbk);
+
+        verificarUsuarioLogado();
 
         email = (EditText) findViewById(R.id.campo_email_login);
         senha = (EditText) findViewById(R.id.campo_senha_login);
@@ -70,6 +74,9 @@ public class LoginActivity extends AppCompatActivity {
 
                 if(task.isSuccessful()){
 
+                    Preferencias preferencias = new Preferencias(LoginActivity.this);
+                    String usuarioLogado = Base64Custom.codificarBase64(usuario.getEmail());
+                    preferencias.salvarDados(usuarioLogado);
 
                     abrirTelaPrincipal();
 
@@ -112,6 +119,15 @@ public class LoginActivity extends AppCompatActivity {
 
         Intent intent = new Intent(LoginActivity.this, CadastroUsuarioActivity.class);
         startActivity( intent );
+
+    }
+
+    public void verificarUsuarioLogado(){
+
+        autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
+        if(autenticacao.getCurrentUser() != null){
+            abrirTelaPrincipal();
+        }
 
     }
 

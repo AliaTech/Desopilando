@@ -50,7 +50,7 @@
                 android:background="@android:color/transparent"
                 android:drawableLeft="@drawable/ic_store_mall_directory_24dp"
                 android:drawablePadding="12dp"
-                android:hint="Nome do local/evento"
+                android:hint="*Nome do local/evento/serviço"
                 android:inputType="textPersonName"
                 android:maxLines="1"
                 android:padding="8dp"
@@ -93,6 +93,7 @@
                 android:textSize="16dp" />
 
             <Button
+                android:id="@+id/botaoAbrirMapas"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginTop="4dp"
@@ -114,7 +115,7 @@
                 android:background="@android:color/transparent"
                 android:drawableLeft="@drawable/ic_phone"
                 android:drawablePadding="12dp"
-                android:hint="Tefone para contato"
+                android:hint="*Tefone para contato"
                 android:inputType="textPhonetic"
                 android:maxLines="1"
                 android:padding="8dp"
@@ -136,7 +137,7 @@
                 android:background="@android:color/transparent"
                 android:drawableLeft="@drawable/ic_description"
                 android:drawablePadding="12dp"
-                android:hint="Insira uma descrição"
+                android:hint="*Insira uma descrição"
                 android:inputType="textMultiLine"
                 android:padding="8dp"
                 android:textColor="@color/black"
@@ -158,6 +159,7 @@
                 android:textSize="16dp" />
 
             <Button
+                android:id="@+id/botaoAbrirGaleria"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginTop="4dp"
@@ -202,6 +204,7 @@
                 android:background="@color/black" />
 
             <Button
+                android:id="@+id/botaoCadastrarLugar"
                 android:layout_width="200dp"
                 android:layout_height="40dp"
                 android:background="@drawable/bkgd_orange"
