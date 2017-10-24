@@ -12,6 +12,7 @@ public class Estabelecimento {
     private String nome;
     private String descricao;
     private String telefone;
+    private String promocao;
     private ImageView foto;
 
     public Estabelecimento() {

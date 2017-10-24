@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.desopilando.aliatech.desopilando.R;
@@ -14,6 +15,10 @@ public class CadastroEstabelecimentoActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private Spinner spinner;
+    private EditText nome;
+    private EditText telefone;
+    private EditText descricao;
+    private EditText promocoes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +28,11 @@ public class CadastroEstabelecimentoActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Novo Cadastro");
         setSupportActionBar(toolbar);
+
+        nome = (EditText) findViewById(R.id.campo_nome_estabelecimento);
+        telefone = (EditText) findViewById(R.id.campo_fone_estabelecimento);
+        descricao = (EditText) findViewById(R.id.campo_descricao);
+        promocoes = (EditText) findViewById(R.id.campo_promocao);
 
         Spinner spinner = (Spinner) findViewById(R.id.locais_spinner);
 
