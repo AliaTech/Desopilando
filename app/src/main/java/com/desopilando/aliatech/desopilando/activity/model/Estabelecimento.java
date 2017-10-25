@@ -2,7 +2,9 @@ package com.desopilando.aliatech.desopilando.activity.model;
 
 import android.widget.ImageView;
 
+import com.desopilando.aliatech.desopilando.activity.activity.CadastroEstabelecimentoActivity;
 import com.desopilando.aliatech.desopilando.activity.config.ConfiguracaoFirebase;
+import com.desopilando.aliatech.desopilando.activity.helper.Preferencias;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
 
@@ -22,6 +24,7 @@ public class Estabelecimento {
     }
 
     public void salvar(){
+
 
         DatabaseReference referenciaFirebase = ConfiguracaoFirebase.getFirebase();
         referenciaFirebase.child("locais").child(getId()).setValue(this);
