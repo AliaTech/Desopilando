@@ -33,6 +33,14 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
 
     private FirebaseAuth autenticacao;
 
+    public FirebaseAuth getAutenticacao() {
+        return autenticacao;
+    }
+
+    public void setAutenticacao(FirebaseAuth autenticacao) {
+        this.autenticacao = autenticacao;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
