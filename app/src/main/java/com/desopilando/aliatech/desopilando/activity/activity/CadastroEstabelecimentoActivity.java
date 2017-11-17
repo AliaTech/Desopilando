@@ -21,6 +21,7 @@ import com.desopilando.aliatech.desopilando.activity.helper.Base64Custom;
 import com.desopilando.aliatech.desopilando.activity.helper.Preferencias;
 import com.desopilando.aliatech.desopilando.activity.model.Estabelecimento;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -39,7 +40,6 @@ public class CadastroEstabelecimentoActivity extends AppCompatActivity {
     private Button abrirMapas;
     private FirebaseAuth usuarioFirebase;
     private Estabelecimento estabelecimento;
-    private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,10 +84,14 @@ public class CadastroEstabelecimentoActivity extends AppCompatActivity {
                     estabelecimento.setDescricao(descricao.getText().toString());
                     estabelecimento.setPromocao(promocoes.getText().toString());
 
-                    String identificadorEstabelecimento = Base64Custom.codificarBase64(estabelecimento.getNome());
-                    estabelecimento.setId(identificadorEstabelecimento);
+                    String usuarioAtual = Base64Custom.codificarBase64(usuarioFirebase.getCurrentUser().getEmail());
+                    estabelecimento.setId(usuarioAtual);
                     estabelecimento.salvar();
 
+                    Toast.makeText(CadastroEstabelecimentoActivity.this, "Cadastrando!", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(CadastroEstabelecimentoActivity.this, MainActivity.class );
+                    startActivity(intent);
+                    finish();
                 }
             }
         });

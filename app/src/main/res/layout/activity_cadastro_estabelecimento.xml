@@ -135,9 +135,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:background="@android:color/transparent"
-                android:drawableLeft="@drawable/ic_description"
+                android:drawableLeft="@drawable/ic_location_on"
                 android:drawablePadding="12dp"
-                android:hint="*Insira uma descrição"
+                android:hint="*Insira o endereço"
                 android:inputType="textMultiLine"
                 android:padding="8dp"
                 android:textColor="@color/black"
@@ -148,6 +148,36 @@
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:text="Adicione um descrição: "
+                android:textSize="16dp" />
+
+
+            <EditText
+                android:id="@+id/campo_promocao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@android:color/transparent"
+                android:drawablePadding="12dp"
+                android:hint="Adicione informações aqui!"
+                android:inputType="textMultiLine"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/blue_grey_primary"
+                android:textSize="16dp"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
                 android:background="@color/black" />
 
             <TextView
@@ -173,35 +203,7 @@
                 android:layout_marginTop="8dp"
                 android:background="@color/black" />
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
-                android:text="Promoções ou eventos: "
-                android:textSize="16dp" />
 
-
-            <EditText
-                android:id="@+id/campo_promocao"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:background="@android:color/transparent"
-                android:drawablePadding="12dp"
-                android:hint="Adicione informações aqui!"
-                android:inputType="textMultiLine"
-                android:padding="8dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/blue_grey_primary"
-                android:textSize="16dp"
-                tools:ignore="HardcodedText,RtlHardcoded" />
-
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="1dp"
-                android:layout_marginTop="5dp"
-                android:background="@color/black" />
 
             <Button
                 android:id="@+id/botaoCadastrarLugar"
