@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.desopilando.aliatech.desopilando.R;
+import com.desopilando.aliatech.desopilando.activity.adapter.LocalAdapter;
 import com.desopilando.aliatech.desopilando.activity.config.ConfiguracaoFirebase;
 import com.desopilando.aliatech.desopilando.activity.helper.Base64Custom;
 import com.desopilando.aliatech.desopilando.activity.helper.Preferencias;
@@ -29,7 +30,7 @@ public class LocaisFragment extends Fragment {
 
     private ListView listView;
     private ArrayAdapter adapter;
-    private ArrayList<String> locais;
+    private ArrayList<Estabelecimento> locais;
     private DatabaseReference firebase;
     private ValueEventListener valueEventListenerLocais;
 
@@ -66,6 +67,8 @@ public class LocaisFragment extends Fragment {
                 locais
         );*/
 
+
+        adapter = new LocalAdapter(getActivity(), locais);
         listView.setAdapter(adapter);
 
         Preferencias preferencias = new Preferencias(getActivity());
@@ -84,7 +87,7 @@ public class LocaisFragment extends Fragment {
                 //Listar locais
                 for(DataSnapshot dados: dataSnapshot.getChildren()){
                     Estabelecimento estabelecimento = dados.getValue(Estabelecimento.class);
-                    locais.add(estabelecimento.getNome());
+                    locais.add(estabelecimento);
                 }
 
                 adapter.notifyDataSetChanged();
